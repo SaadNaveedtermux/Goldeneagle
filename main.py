@@ -3,8 +3,8 @@ import time
 import json
 import random
 
-# Read authentication tokens from data.txt
-with open("data.txt", "r") as file:
+# Read authentication tokens from data12.txt
+with open("data12.txt", "r") as file:
     auth_tokens = [line.strip() for line in file if line.strip()]
 
 # API URLs
