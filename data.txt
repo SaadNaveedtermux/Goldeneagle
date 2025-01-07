@@ -1,0 +1,5 @@
+# Replace these examples with your actual authentication tokens
+# Example tokens:
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.exampleToken1
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.exampleToken2
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.exampleToken3
