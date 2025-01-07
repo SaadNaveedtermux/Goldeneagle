@@ -74,5 +74,5 @@ while True:
             send_claim_request(token)
             time.sleep(2)  # Small delay between requests
 
-    print("Waiting 5 minutes before the next cycle...")
-    time.sleep(300)  # Wait for 5 minutes before restarting
+    print("Waiting 3 minutes before the next cycle...")
+    time.sleep(180)  # Wait for 3 minutes before restarting
