@@ -10,7 +10,6 @@ with open("data.txt", "r") as file:
 
 # API URLs
 tap_url = "https://gold-eagle-api.fly.dev/tap"
-claim_url = "https://gold-eagle-api.fly.dev/wallet/claim"
 
 # Headers template (common for all requests except Authorization)
 headers_template = {
@@ -46,23 +45,10 @@ def send_tap_request(auth_token):
     except requests.exceptions.RequestException as e:
         print(f"TAP Request failed for {auth_token[:10]}: {e}")
 
-def send_claim_request(auth_token):
-    headers = headers_template.copy()
-    headers["authorization"] = f"Bearer {auth_token}"
-    headers["content-length"] = "0"
-
-    try:
-        response = requests.post(claim_url, headers=headers)
-        print(f"CLAIM Response ({auth_token[:10]}...): {response.status_code} - {response.text}")
-    except requests.exceptions.RequestException as e:
-        print(f"CLAIM Request failed for {auth_token[:10]}: {e}")
-
 def process_account(auth_token):
     while True:
         send_tap_request(auth_token)
         time.sleep(2)
-        send_claim_request(auth_token)
-        time.sleep(300)
 
 # Start a thread for each token
 threads = []
