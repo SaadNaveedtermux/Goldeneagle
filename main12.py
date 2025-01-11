@@ -5,7 +5,7 @@ import random
 from threading import Thread
 
 # Read authentication tokens from data.txt
-with open("data.txt", "r") as file:
+with open("data12.txt", "r") as file:
     auth_tokens = [line.strip() for line in file if line.strip()]
 
 # API URLs
