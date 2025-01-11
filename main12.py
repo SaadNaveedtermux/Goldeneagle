@@ -48,7 +48,7 @@ def send_tap_request(auth_token):
 def process_account(auth_token):
     while True:
         send_tap_request(auth_token)
-        time.sleep(2)
+        time.sleep(300) # Wait for 5 minutes (300 seconds) between requests
 
 # Start a thread for each token
 threads = []
